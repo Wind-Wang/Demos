@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body{
+		text-align: center;
+	}
+	p{
+		font-size: 80px;
+		color:pink;
+	}
+	input{
+		height: 40px;/*高度*/
+		width:80px;/*宽度*/
+		border-width: 0px;/*边框宽度*/
+		border-radius: 10px;/*边框半径*/
+		border: 1px solid rgba(0,0,0,.2);
+		outline: none; /* 不显示轮廓线 */
+		cursor: pointer; /* 鼠标移入按钮范围时出现手势 */
+		color:orange;
+	}
+	#divset{
+		margin:auto;
+		background-color:pink;
+		width:0px;
+		height:1px;
+		transition: width 1s;
+		-moz-transition:width 10s;
+	}
+	</style>
+	<script type="text/javascript">
+	function Change(){
+		divset = document.getElementById("divset");
+		if(divset.style.width=="" || divset.style.width=="0px"){
+ 			divset.style.width="300px";
+ 		}
+ 		else{
+ 			divset.style.width="0";
+ 		}
+	}
+	</script>
+</head>
+<body>
+	<p>CSS3学习</p>
+	<div id="divset"></div>
+	<br>
+	<input type="button" value="切换样式" onclick="Change()">
+</body>
+</html>
